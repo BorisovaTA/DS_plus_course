@@ -59,9 +59,11 @@
 ```text
 images_search/
 │
-├── images_search.ipynb      # основной ноутбук             
-├── README.md                # описание проекта
-└── requirements.txt         # зависимости
+├── 01_Model_development.ipynb      # разработка модели классификации 
+├── 02_CLIP_model.ipynb             # тестирование модели CLIP
+├── images_search.ipynb             # полная версия с визуализациями (для скачивания)           
+├── README.md                       # описание проекта
+└── requirements.txt                # зависимости
 ```
 
 ## Используемые инструменты

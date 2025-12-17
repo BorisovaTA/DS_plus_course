@@ -20,38 +20,10 @@
 apartment_price/
 │
 ├── apartment_price.ipynb      # основной ноутбук проекта
-├── .env.example               # шаблон переменных окружения для Spark/Java
-├── .vscode/
-│   └── settings.json          # настройки VS Code (применение env)
 ├── requirements.txt           # зависимости Python
 └── README.md                  # описание проекта
 
 ```
-
-## Запуск проекта (macOS + VS Code)
-1.  Установка Java 21 (Temurin)
-```bash
-brew install --cask temurin@21
-```
-2. Создание виртуального окружения и установка зависимостей
-
-В корне проекта:
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip
-pip install -r requirements.txt
-```
-
-3. Настройка переменных окружения для Spark
-```bash
-cp .env.example .env
-```
-
-4. В VS Code:
-- `Python: Select Interpreter` → `.venv`
-- Ноутбук `apartment_price.ipynb`
-- **Restart Kernel**
 
 ## Используемые инструменты
 | Компонент / задача          | Инструменты и библиотеки        |

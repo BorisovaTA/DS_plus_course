@@ -2,7 +2,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-def boxplots(data, col):    
+def boxplots(data, col):   
+    '''
+    Функция для отрисовки графика "ящик с усами".
+    ''' 
     plt.figure(figsize=(8, 4))
     sns.boxplot(x='star_type', y=col, data=data, palette='Set1')
     plt.title(f'Разброс значений признаков в поле {col} по типу звезды')
@@ -10,6 +13,9 @@ def boxplots(data, col):
     plt.show();
 
 def category_graph(data, columns):
+    '''
+    Функция для отрисовки столбчатых диаграмм для категориальных признаков.
+    '''
     for column in columns:
         values = data[~data[column].isna()].value_counts(column)
         ax = values.plot.barh()
@@ -26,6 +32,9 @@ def category_graph(data, columns):
         plt.show();
 
 def numeric_graph(data, num_columns):
+    '''
+    Функция для отрисовки гистограммы и "ящика с усами" для количественных признаков.
+    '''
     for column in num_columns:
         data[column].hist()
         plt.title(f'Гистограмма распределения в поле "{column}"')
@@ -39,6 +48,9 @@ def numeric_graph(data, num_columns):
         plt.show();
 
 def plot_temp_bar(y_test, y_pred):
+    '''
+    Функция для отрисовки графика «Факт — Прогноз». 
+    '''
     y_test_np = y_test.detach().numpy().flatten()
     y_pred_np = y_pred.detach().numpy().flatten()
 
